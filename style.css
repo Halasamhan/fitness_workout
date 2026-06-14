@@ -1,0 +1,719 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header & Nav */
+header {
+  background-color: #6a0dad;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+nav a.active {
+  background-color: #444;
+  border-bottom: 2px solid #fff;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+}
+
+.f_section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.f_section img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.f_section_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.f_section_text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.f_section_text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.f_section_text a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 30px;
+  background-color: #6a0dad;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.f_section_text a:hover {
+  background-color: #8a2be2;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.about, .classes, .feedbacks, .join, .app-section, .fitness-tips, .page-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.about h2, .classes h2, .feedbacks h2, .join h2, .app-section h2, .fitness-tips h2, .page-section h2 {
+  color: #6a0dad;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.about p, .join p, .app-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ddd;
+}
+
+/* Classes Grid */
+.classes {
+  background-color: #222;
+}
+
+.cl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.class, .feedback, .route-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.class:hover, .route-card:hover {
+  transform: translateY(-10px);
+}
+
+.class {
+  width: 280px;
+}
+
+.class img, .route-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.class h3 {
+  color: #6a0dad;
+  margin: 15px 0 10px;
+  font-size: 1.4rem;
+}
+
+.class p {
+  padding: 0 15px 20px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Feedbacks */
+.feedbacks {
+  background-color: #222;
+}
+
+.fb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feedback {
+  padding: 30px;
+  width: 300px;
+  color: #ddd;
+  background: #2a2a2a;
+}
+
+.feedback img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #6a0dad;
+}
+
+.feedback p {
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.feedback h4 {
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+/* Join Section */
+.join a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #6a0dad;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.join a:hover {
+  background: #444;
+}
+
+/* App Section */
+.app-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.app-images img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Tips List */
+.fitness-tips {
+  background: #222;
+}
+
+.fitness-tips ul {
+  list-style: disc;
+  padding-left: 23%;
+  color: #ddd;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.fitness-tips ul li {
+  margin-bottom: 15px;
+}
+
+/* Split Screen Forms (Signup/Contact) */
+.split-section {
+  display: flex;
+  min-height: 80vh;
+  background-color: #1a1a1a;
+}
+
+.split-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.split-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.split-image h2 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.split-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #222;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 450px;
+  background: #333;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid #444;
+}
+
+.form-box h3 {
+  color: #6a0dad;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form-box p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #aaa;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 12px;
+  background: #444;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #6a0dad;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #8a2be2;
+}
+
+
+
+/*login */
+
+
+
+/* --- LOGIN PAGE SPECIFIC STYLES --- */
+
+/* 1. The Split Screen Layout */
+.split-section {
+  display: flex;
+  min-height: 80vh;
+  background-color: #1a1a1a;
+}
+
+.split-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+/* Dark gradient overlay for the image side */
+.split-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.split-image h2 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.split-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #222;
+}
+
+/* 2. The Form Box */
+.form-box {
+  width: 100%;
+  max-width: 450px;
+  background: #333;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid #444;
+}
+
+.form-box h3 {
+  color: #6a0dad;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form-box p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #aaa;
+}
+
+/* 3. Form Fields */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Standard Inputs (Text, Password, Email) */
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: #444;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Fix for Checkbox: Prevents it from stretching 100% width */
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  cursor: pointer;
+  accent-color: #6a0dad;
+}
+
+/* Links inside form (e.g., Forgot Password) */
+.form-group a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.form-group a:hover {
+  text-decoration: underline;
+}
+
+/* 4. Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #8a2be2;
+}
+
+/* 5. Bottom Links (e.g., Create Account) */
+.contact-info {
+  margin-top: 30px;
+  text-align: center;
+  color: #aaa;
+}
+
+.contact-info a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Contact Specifics */
+.contact-info {
+  margin-top: 30px;
+  text-align: center;
+  color: #aaa;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  color: #6a0dad;
+  margin-right: 10px;
+}
+
+/* Footer */
+/* Main Footer Container */
+footer {
+  background-color: #6a0dad;
+  padding: 30px 20px; /* Reduced from 50px to make height smaller */
+  text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+/* Footer Headings */
+footer h3 {
+  margin-bottom: 5px; /* Reduced spacing */
+  font-size: 1.5rem; /* Reduced size slightly */
+}
+
+footer p {
+  margin-bottom: 10px; /* Reduced spacing */
+  opacity: 0.9;
+}
+
+/* Text Links (Classes, Join, Contact) */
+.footer-links {
+  margin: 10px 0; /* Reduced from 25px */
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 15px 0; /* Reduced from 30px */
+}
+
+/* The Round Button for the Icon */
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover Effect: Inverts colors (White BG, Purple Icon) */
+.social-icon-link:hover {
+  background-color: #ffffff;
+  color: #6a0dad;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* SVG Icon Styling inside the button */
+.social-icon-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+}
+
+/* Bottom Copyright Line */
+.footer-bottom {
+  margin-top: 15px; /* Reduced from 30px */
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px; /* Reduced from 20px */
+}
+
+
+
+/* --- Scroll Animation Styles --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .f_section_text {
+    position: static;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .cl, .fb, .app-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class, .feedback {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .split-section {
+    flex-direction: column;
+  }
+  
+  .split-image {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .split-image h2 {
+    font-size: 2rem;
+  }
+
+  .fitness-tips ul {
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .f_section_text h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-section {
+    flex-direction: column;
+  }
+  
+  .split-image {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .split-image h2 {
+    font-size: 2rem;
+  }
+}
